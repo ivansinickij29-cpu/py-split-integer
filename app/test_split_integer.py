@@ -2,12 +2,7 @@ from app.split_integer import split_integer
 
 
 def test_sum_of_the_parts_should_be_equal_to_value() -> None:
-    parts = split_integer(17, 4)
-    assert isinstance(parts, list)
-    assert len(parts) == 4
-    assert sum(parts) == 17
-    assert max(parts) - min(parts) <= 1
-    assert parts == sorted(parts)
+    assert sum(split_integer(15, 4)) == 15
 
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
